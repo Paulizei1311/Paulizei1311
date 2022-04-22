@@ -5,10 +5,10 @@
 
 
 create table "buerogebaeude"(
-	BuerogebaeudeID int PRIMARY KEY identity,
-	"anzahlBuero" int				not null,
+	BuerogebaeudeID int 			PRIMARY KEY identity,
+	"anzahlBuero" int			not null,
 	"anzahlMitarbeiter" int			not null,
-	"baujahr" int					not null check("baujahr" > 1800),
+	"baujahr" int				not null check("baujahr" > 1800),
 	"standort" varchar (42)			not null,
 	"parkplatzAnzahl" int			check ("parkplatzAnzahl" >= 0),
 	"abteilungen" varchar (42)		not null,
@@ -26,7 +26,7 @@ create table "gueter"(
 
 create table "lagerhalle"(
 	LagerhalleID int PRIMARY KEY identity,
-	"groeße" int					not null check ("groeße" > 0),
+	"groeÃŸe" int					not null check ("groeÃŸe" > 0),
 	"anzahlMitarbeiter" int			check ("anzahlMitarbeiter" >= 0),
 	"baujahr" int					not null check ("baujahr" > 0),
 	"standort" varchar (42)			not null,
